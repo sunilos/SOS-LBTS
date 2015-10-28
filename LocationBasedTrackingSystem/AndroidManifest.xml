@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.locationbasedtrackingsystem.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <permission
+        android:name="in.co.sunrays.lbts.ctl.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="in.co.sunrays.lbts.ctl.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- to get location using NetworkProvider -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/imge"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.HomePageCtl"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.NewTaskCtl"
+            android:label="@string/title_activity_new_task" >
+        </activity>
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.UpComingCtl"
+            android:label="@string/title_activity_up_coming" >
+        </activity>
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.PassedCtl"
+            android:label="@string/title_activity_passed" >
+        </activity>
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.HelpingCtl"
+            android:label="@string/title_activity_helping" >
+        </activity>
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.DailyRoutineCtl"
+            android:label="@string/title_activity_daily_routine" >
+        </activity>
+
+        <receiver android:name="in.co.sunrays.lbts.utility.ReminderAlarm" >
+        </receiver>
+        <receiver android:name="in.co.sunrays.lbts.utility.LocationReminder" >
+        </receiver>
+
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.SpinnerCtl"
+            android:label="@string/title_activity_spinner" >
+        </activity>
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.DateCtl"
+            android:label="@string/title_activity_date" >
+        </activity>
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.GetMapCtl"
+            android:label="@string/title_activity_map" >
+        </activity>
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.DemoMapCtl"
+            android:label="@string/title_activity_demo_map" >
+        </activity>
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.FavoritePlaceCtl"
+            android:label="@string/title_activity_favorite_place" >
+        </activity>
+
+        <uses-library android:name="com.google.android.maps" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDsDmZrdjBBgdLDF-c0rCicyN9MhSufWtk" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="6" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDsDmZrdjBBgdLDF-c0rCicyN9MhSufWtk" />
+
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.BaseCtl"
+            android:label="@string/title_activity_base" >
+        </activity>
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.MainCtl"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.NotificationCtl"
+            android:label="@string/title_activity_notification" >
+        </activity>
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.NotifyAlarmCtl"
+            android:label="@string/title_activity_notify_alarm" >
+        </activity>
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.PlaceListCtl"
+            android:label="@string/title_activity_place_list" >
+        </activity>
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.SinglePlaceCtl"
+            android:label="@string/title_activity_single_place" >
+        </activity>
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.UserRegistrationCtl"
+            android:label="@string/title_activity_user_registration" >
+        </activity>
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.LoginCtl"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="in.co.sunrays.lbts.ctl.UserListCtl"
+            android:label="@string/title_activity_user_list" >
+        </activity>
+    </application>
+
+</manifest>
